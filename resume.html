@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>苏小龙 - 高级前端开发工程师</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #fff;
+            line-height: 1.8;
+            padding: 40px 20px;
+        }
+        .container { max-width: 850px; margin: 0 auto; background: rgba(255,255,255,0.05); border-radius: 20px; padding: 40px; backdrop-filter: blur(10px); }
+        
+        .header { text-align: center; margin-bottom: 40px; border-bottom: 2px solid rgba(102,126,234,0.3); padding-bottom: 30px; }
+        .avatar { 
+            width: 120px; 
+            height: 120px; 
+            border-radius: 50%; 
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            box-shadow: 0 8px 30px rgba(102, 126, 234, 0.4);
+            border: 4px solid rgba(255,255,255,0.2);
+        }
+        .name { font-size: 2.5rem; font-weight: bold; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 10px; }
+        .title { font-size: 1.3rem; color: #a0a0a0; margin-bottom: 15px; }
+        .contact { display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; color: #d0d0d0; font-size: 0.95rem; }
+        .contact span { display: flex; align-items: center; gap: 5px; }
+        
+        .section { margin-bottom: 35px; }
+        .section-title { font-size: 1.4rem; color: #667eea; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid rgba(102,126,234,0.2); display: flex; align-items: center; gap: 10px; }
+        
+        .experience-item { margin-bottom: 25px; padding: 20px; background: rgba(102,126,234,0.05); border-radius: 12px; border-left: 4px solid #667eea; }
+        .exp-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap: 10px; }
+        .exp-title { font-size: 1.1rem; font-weight: bold; color: #fff; }
+        .exp-company { color: #667eea; font-weight: 500; }
+        .exp-time { color: #888; font-size: 0.9rem; }
+        .exp-desc { color: #d0d0d0; }
+        .exp-desc li { margin-bottom: 8px; }
+        
+        .skills-grid { display: flex; flex-wrap: wrap; gap: 12px; }
+        .skill-tag {
+            background: linear-gradient(135deg, rgba(102,126,234,0.2) 0%, rgba(118,75,162,0.2) 100%);
+            border: 1px solid rgba(102,126,234,0.4);
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            transition: transform 0.2s;
+        }
+        .skill-tag:hover { transform: translateY(-2px); }
+        
+        .highlight { color: #667eea; font-weight: bold; }
+        
+        .ai-tools { 
+            background: linear-gradient(135deg, rgba(102,126,234,0.15) 0%, rgba(118,75,162,0.15) 100%);
+            border: 1px solid rgba(102,126,234,0.5);
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+        .ai-tools-title { color: #667eea; font-weight: bold; margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+        
+        .salary-badge {
+            display: inline-block;
+            background: rgba(102, 200, 100, 0.2);
+            border: 1px solid rgba(102, 200, 100, 0.5);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            color: #4ade80;
+            margin-left: 10px;
+        }
+        
+        .project-item { margin-bottom: 20px; padding: 15px; background: rgba(255,255,255,0.03); border-radius: 10px; }
+        .project-title { font-weight: bold; color: #fff; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+        .project-desc { color: #b0b0b0; font-size: 0.95rem; }
+        .tech-stack { color: #667eea; font-size: 0.9rem; margin-top: 8px; }
+        
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 600px) { .two-col { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="avatar">🐺</div>
+            <div class="name">苏小龙</div>
+            <div class="title">高级前端开发工程师 <span class="salary-badge">15K·13薪</span></div>
+            <div class="contact">
+                <span>📧 nevesto777777@gmail.com</span>
+                <span>📱 13518160587</span>
+                <span>🌍 成都</span>
+                <span>🎓 乐山师范学院 · 本科</span>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">💼 工作经历</div>
+            
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div>
+                        <div class="exp-title">中高级前端开发工程师</div>
+                        <div class="exp-company">成都黑芝麻科技有限公司 <span style="color:#888;font-size:0.85rem;">· 汽车芯片服务</span></div>
+                    </div>
+                    <div class="exp-time">2022.12 - 至今</div>
+                </div>
+                <ul class="exp-desc">
+                    <li>主导 <span class="highlight">VSCode 插件</span> 与 <span class="highlight">Electron 桌面应用</span> 全栈开发</li>
+                    <li>负责产品设计及独立研发，<span class="highlight">提升团队开发效率 40%</span></li>
+                    <li>基于 <span class="highlight">Vue3 + TypeScript + Element Plus</span> 构建企业级前端应用</li>
+                    <li>实现 <span class="highlight">Protobuf + WebSocket / gRPC</span> 高效数据通信</li>
+                    <li>性能优化成果：<span class="highlight">首屏加载提升 50%</span></li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div>
+                        <div class="exp-title">前端开发组长</div>
+                        <div class="exp-company">成都博智维讯信息技术有限公司 <span style="color:#888;font-size:0.85rem;">· 计算机应用</span></div>
+                    </div>
+                    <div class="exp-time">2020.09 - 2022.11</div>
+                </div>
+                <ul class="exp-desc">
+                    <li>负责 <span class="highlight">PC 端 + 小程序</span> 项目全周期开发管理</li>
+                    <li>主导前端<span class="highlight">架构设计</span>与核心模块研发</li>
+                    <li><span class="highlight">带领 3 人团队</span> 完成多个大型项目交付</li>
+                    <li>搭建项目框架，<span class="highlight">代码复用率提升 60%</span></li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div>
+                        <div class="exp-title">前端开发工程师</div>
+                        <div class="exp-company">成都睿码科技有限公司 <span style="color:#888;font-size:0.85rem;">· 科技推广和应用服务</span></div>
+                    </div>
+                    <div class="exp-time">2017.09 - 2020.01</div>
+                </div>
+                <ul class="exp-desc">
+                    <li>负责 <span class="highlight">C 端获客系统</span> 及 WEB 平台端开发</li>
+                    <li>独立完成多个项目的前端研发与维护</li>
+                    <li>与后端紧密协作，<span class="highlight">接口联调零失误</span></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">🛠️ 专业技能</div>
+            
+            <div class="two-col">
+                <div>
+                    <h4 style="color:#667eea;margin-bottom:12px;">核心技能</h4>
+                    <div class="skills-grid">
+                        <span class="skill-tag">⚛️ React / Vue3</span>
+                        <span class="skill-tag">📘 TypeScript</span>
+                        <span class="skill-tag">🔌 Electron</span>
+                        <span class="skill-tag">📦 VSCode 插件</span>
+                        <span class="skill-tag">⚡ Vite / Webpack</span>
+                        <span class="skill-tag">🎨 AntD / Element Plus</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="color:#667eea;margin-bottom:12px;">进阶技能</h4>
+                    <div class="skills-grid">
+                        <span class="skill-tag">📱 微信小程序 / H5</span>
+                        <span class="skill-tag">🔄 Uni-app</span>
+                        <span class="skill-tag">📊 数据可视化</span>
+                        <span class="skill-tag">🧪 单元测试</span>
+                        <span class="skill-tag">🔌 gRPC / WebSocket</span>
+                        <span class="skill-tag">🟢 Node.js</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ai-tools">
+                <div class="ai-tools-title">🤖 AI 辅助编程技能（加分项）</div>
+                <div class="skills-grid">
+                    <span class="skill-tag">✨ Claude Code / Cursor</span>
+                    <span class="skill-tag">🐺 OpenClaw Agent</span>
+                    <span class="skill-tag">🔮 AI 代码生成与优化</span>
+                    <span class="skill-tag">📝 AI 辅助文档编写</span>
+                    <span class="skill-tag">🔍 AI 辅助代码审查</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">📚 重点项目经验</div>
+            
+            <div class="project-item">
+                <div class="project-title">🚀 镜像烧录工具 <span style="font-size:0.85rem;color:#888;font-weight:normal;">Vue3 + Electron + VSCode插件</span></div>
+                <p class="project-desc">为汽车芯片研发的烧录程序，支持 Bootloader、设备树、内核镜像等一键烧录。<span class="highlight">提升二开效率 300%</span>，获公司内部及供应商高度认可。</p>
+                <p class="tech-stack">Vue3 + Element Plus + TS + Protobuf + WebSocket + Electron</p>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-title">🎯 GPU 采集工具 <span style="font-size:0.85rem;color:#888;font-weight:normal;">React + Electron + gRPC</span></div>
+                <p class="project-desc">内核调试工具，快速定位故障、调试硬件。<span class="highlight">提升调试效率 200%</span>，兼容 Electron 与 VSCode 双端 API。</p>
+                <p class="tech-stack">React + Ant Design + TS + gRPC + Node + WebSocket</p>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-title">🏢 五粮液企业微信平台 <span style="font-size:0.85rem;color:#888;font-weight:normal;">Vue + 小程序</span></div>
+                <p class="project-desc">担任前端 Leader，搭建企业微信第三方工作平台及 SFA 小程序。<span class="highlight">获五粮液集团年度优秀开发人员表彰</span>。</p>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-title">🍶 舍得酒业系列项目 <span style="font-size:0.85rem;color:#888;font-weight:normal;">Vue + 原生小程序 + 企业微信</span></div>
+                <p class="project-desc">H3 活动页面 ↑ 日活跃度；小程序 ↑ 取证效率及数据真实性；企业微信优化内部审核流程。</p>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-title">🏢 CRM 企业管理系统 <span style="font-size:0.85rem;color:#888;font-weight:normal;">Lerna + Vue + TypeScript</span></div>
+                <p class="project-desc">基于 Lerna 多包管理架构，<span class="highlight">提升二开团队效率 60%</span>。</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">🎓 教育背景</div>
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-title">乐山师范学院 · 计算机科学与技术 · 本科</div>
+                    <div class="exp-time">2013 - 2017</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">🌐 开源贡献</div>
+            
+            <div class="project-item">
+                <div class="project-title">🐺 OpenClaw <span style="font-size:0.85rem;color:#888;font-weight:normal;">AI Agent 框架</span></div>
+                <p class="project-desc">
+                    <span class="highlight">fix(feishu): add HTTPS_PROXY support for Axios HTTP requests</span><br>
+                    修复了当设置 HTTPS_PROXY 环境变量时，飞书 API 请求失败的问题（400 错误）<br>
+                    PR: <a href="https://github.com/openclaw/openclaw/pull/41943" target="_blank" style="color: #667eea;">#41943</a> | Issue: #41820
+                </p>
+                <p class="project-desc" style="margin-top: 10px;">
+                    <span class="highlight">fix(feishu): escape underscores in markdown URLs</span><br>
+                    修复了发送包含下划线的 URL 时，飞书显示不正确的问题<br>
+                    PR: <a href="https://github.com/openclaw/openclaw/pull/41946" target="_blank" style="color: #667eea;">#41946</a> | Issue: #41860
+                </p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">🌐 博客 & 其他</div>
+            <div class="experience-item">
+                <p style="color: #d0d0d0;">
+                    📝 个人博客：<span class="highlight">https://ajaxsir.github.io/</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
